@@ -1,10 +1,11 @@
 using System.Windows.Forms;
-
+using System.Collections;
+using System.Text;
 namespace WordGuessingGameWindowsApp
 {
     public partial class Form1 : Form
     {
-        private string guessWord = "computer";
+       
         public Form1()
         {
             InitializeComponent();
@@ -18,7 +19,9 @@ namespace WordGuessingGameWindowsApp
 
         private void Guessing1_Click(object sender, EventArgs e)
         {
-            string word = textBox1.Text;
+            string guessWord = "computer";
+
+            StringBuilder word = new StringBuilder(textBox1.Text);
 
             if (word.Equals(guessWord))
             {
